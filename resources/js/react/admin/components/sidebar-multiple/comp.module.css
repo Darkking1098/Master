@@ -1,0 +1,38 @@
+.sidebar {
+    width: 280px;
+    background: #000000;
+    color: var(--sec_text);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+.brand {
+    height: 40px;
+    display: block;
+    margin: 20px auto;
+}
+ul {
+    list-style: none;
+}
+.group_head {
+    overflow: hidden;
+}
+.group_head:hover {
+    background: #ffffff22;
+}
+.group_head_icon {
+    transition: all 0.4s;
+}
+.group_title {
+    transition: all 0.2s;
+    cursor: pointer;
+    border-bottom: 1px solid var(--gray_700);
+}
+.link {
+    display: block;
+    padding: 10px 30px;
+}
+.innerlinks {
+    padding-left: 30px;
+    transition: all 0.4s;
+}

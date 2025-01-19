@@ -1,0 +1,63 @@
+label:has(.mu-switch) {
+    gap: 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+.mu-switch input {
+    display: none;
+}
+.mu-switch {
+    --dim: 20px;
+    --pad: 2px;
+    display: block;
+    height: var(--dim);
+    width: calc(2 * (var(--dim) - var(--pad)));
+    padding: var(--pad);
+    background: var(--gray_200);
+    border-radius: 100px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.mu-switch .slider {
+    height: 100%;
+    width: 50%;
+    background: white;
+    box-shadow: 0 0 5px 0 var(--gray_300);
+    transform: translateX(0%);
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+.mu-switch:has(input:checked) {
+    background: var(--prime);
+}
+.mu-switch .slider {
+    animation: deactive 0.4s cubic-bezier(0.2, -0.77, 0.77, 2.2);
+}
+.mu-switch:has(input:checked) .slider {
+    box-shadow: 0 0 5px 0 var(--gray_600);
+    animation: active 0.4s cubic-bezier(0.2, -0.77, 0.77, 2.2) forwards;
+}
+@keyframes active {
+    0%,
+    100% {
+        width: 50%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        margin-left: auto;
+    }
+}
+@keyframes deactive {
+    0%,
+    100% {
+        width: 50%;
+    }
+    50% {
+        width: 100%;
+    }
+    0% {
+        margin-left: auto;
+    }
+}

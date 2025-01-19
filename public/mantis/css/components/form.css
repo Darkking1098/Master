@@ -1,0 +1,55 @@
+form {
+    gap: 20px;
+}
+form:not(.mini) section.panel {
+    border-bottom: 5px solid var(--warn);
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 20px 0 #00000011;
+    padding: 20px;
+}
+form section.panel:has(.sub_section) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form .form_info {
+    border-bottom: 1px solid var(--gray_200);
+}
+form section .section_info {
+    margin-bottom: 20px;
+}
+form.mini section .section_info {
+    display: none;
+}
+form .form_info .form_desc,
+form:not(.mini) section .section_info .section_desc {
+    font-size: 0.9em;
+    color: var(--gray_500);
+    font-weight: 600;
+    margin-block: 4px 20px;
+}
+form fieldset {
+    border: none;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+}
+/* Buttons */
+form button:not(:disabled)[type="reset"] {
+    color: var(--error_dark);
+    background: rgba(var(--error_rgb), 0.1);
+}
+form button:not(:disabled)[type="reset"]:hover {
+    background: rgba(var(--error_rgb), 0.4);
+}
+form button:not(:disabled)[type="submit"] {
+    color: white;
+    background: var(--success);
+}
+form button:not(:disabled)[type="submit"]:hover {
+    background: var(--success_dark);
+}
+form button:disabled {
+    cursor: not-allowed;
+}

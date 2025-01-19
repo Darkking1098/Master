@@ -1,0 +1,14 @@
+header {
+    height: 60px;
+    padding-inline: 20px;
+    background: black;
+    color: white;
+}
+header nav {
+    gap: 6px;
+}
+header nav a {
+    background: var(--gray_800);
+    padding: 8px 16px;
+    border-radius: 6px;
+}

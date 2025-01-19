@@ -1,0 +1,44 @@
+.sidebar {
+    width: 280px;
+    background: #000000;
+    color: var(--sec_text);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+.brand {
+    height: 40px;
+    display: block;
+    margin: 20px auto;
+}
+ul {
+    list-style: none;
+}
+.group_head {
+    overflow: hidden;
+}
+.group_head_active,
+.group_head:hover {
+    color: var(--text_prime);
+    font-weight: 600;
+    background: #ffffff22;
+}
+.group_head_icon {
+    transition: all 0.4s;
+}
+.link {
+    display: block;
+    font-weight: 400;
+    padding: 10px 30px;
+}
+.group_title {
+    transition: all 0.2s;
+    cursor: pointer;
+    border-bottom: 1px solid var(--gray_700);
+    display: flex;
+    justify-content: space-between;
+}
+.innerlinks {
+    padding-left: 30px;
+    transition: all 0.4s;
+}

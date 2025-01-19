@@ -1,0 +1,92 @@
+.mu-field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.mu-field:has(.otp-input) {
+    flex-grow: unset;
+}
+.mu-field label {
+    font-size: 0.75em;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+.mu-field label i {
+    font-size: 0.9em;
+}
+.mu-field .field_wrap {
+    display: flex;
+    box-shadow: 0 0 0 1px var(--gray_300);
+    outline: 2px solid transparent;
+    transition: all 0.2s;
+    border-radius: 7px;
+}
+.mu-field .field_wrap i {
+    height: 36px;
+    font-size: 0.75em;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mu-field .field_wrap textarea {
+    resize: block;
+    min-height: 60px;
+}
+.mu-field
+    .field_wrap
+    :where(.input, input, select, textarea):not(
+        [type="radio"],
+        [type="checkbox"]
+    ) {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+    font-size: 1.4rem;
+    padding: 10px 18px;
+}
+.mu-field .field_wrap input.otp-input {
+    text-align: center;
+    padding: 10px 0;
+    height: 36px;
+    aspect-ratio: 1;
+    line-height: 40px;
+}
+.mu-field .field_wrap i ~ :where(.input, input, select, textarea) {
+    padding-left: 0 !important;
+}
+.mu-field .field_wrap :where(.input, input, select, textarea):has(~ i) {
+    padding-right: 0 !important;
+}
+.mu-field .field_wrap :where(.input, input, select, textarea) ~ i {
+    cursor: pointer;
+}
+.mu-field .field_wrap :where(input, textarea, select):focus {
+    font-weight: 600;
+}
+.mu-field:has(:where(input, textarea, select):user-invalid) {
+    color: var(--error);
+}
+.mu-field .field_wrap:has(:where(input, textarea, select):user-invalid) {
+    outline: 2px solid var(--error);
+}
+.mu-field .field_wrap:has(:where(input, textarea, select):focus) {
+    outline: 2px solid var(--gray_900);
+}
+.mu-field
+    :where(.input, input, select, textarea):focus:user-invalid::placeholder {
+    color: var(--error);
+}
+.mu-field p.error {
+    color: var(--error);
+    font-weight: 600;
+    font-size: 0.75em;
+    margin-top: 5px;
+    text-align: right;
+}
