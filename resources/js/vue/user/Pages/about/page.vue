@@ -4,7 +4,9 @@
     </main>
 </template>
 <script>
+import Paginate from "../../../components/paginate.vue";
 export default {
     name: "about",
+    components: { Paginate },
 };
 </script>

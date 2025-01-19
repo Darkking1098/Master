@@ -29,6 +29,13 @@ export default defineConfig(async ({ mode }) => {
         include: ["resources/js/**/*.{js,jsx,ts,tsx}"],
         exclude: [],
     };
+    config.optimizeDeps = {
+        esbuildOptions: {
+            loader: {
+                ".js": "jsx",
+            },
+        },
+    };
 
     config.resolve = {
         alias: {

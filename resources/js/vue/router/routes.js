@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Userroutes from "../user/routes";
+import UserRoutes from "../user/routes";
+import AdminRoutes from "../admin/routes";
 
 export default createRouter({
     history: createWebHistory(),
-    routes: [...Userroutes],
+    routes: [...UserRoutes, ...AdminRoutes],
 });

@@ -1,22 +1,27 @@
 <template>
-    <BasicLayout>
+    <SidebarLayout>
+        <template #sidebar>
+            <SidebarComp />
+        </template>
         <template #header>
             <HeaderComp />
         </template>
         <template #footer>
             <FooterComp />
         </template>
-    </BasicLayout>
+    </SidebarLayout>
 </template>
 <script>
+import SidebarComp from "./components/sidebar/comp.vue";
 import HeaderComp from "./components/header/comp.vue";
 import FooterComp from "./components/footer/comp.vue";
-import BasicLayout from "../components/Layouts/basic.vue";
+import SidebarLayout from "../components/Layouts/sidebar.vue";
 
 export default {
-    name: "user-layout",
+    name: "admin-layout",
     components: {
-        BasicLayout,
+        SidebarComp,
+        SidebarLayout,
         HeaderComp,
         FooterComp,
     },

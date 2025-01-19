@@ -1,12 +1,13 @@
 <template>
     <main>
-        <h1>Hii Bro</h1>
+        <h1>About Page</h1>
+        <Paginate />
     </main>
 </template>
 <script>
 import Paginate from "../../../components/paginate.vue";
 export default {
-    name: "index",
-    components: {Paginate},
+    name: "about",
+    components: { Paginate },
 };
 </script>

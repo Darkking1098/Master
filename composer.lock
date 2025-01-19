@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "371028430761a3803766194d11e85a2e",
+    "content-hash": "05457fb61f4bfa3b4d6d378f2ca01f5e",
     "packages": [
         {
             "name": "brick/math",
@@ -3371,6 +3371,80 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "rawan/mantis",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "G:/Cluster/Mantis/package/mantis",
+                "reference": "90bb48fbb51340cf3f0de56352a6544ad87e265f"
+            },
+            "require": {
+                "rawan/ui": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mantis\\MantisServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mantis\\": "src/"
+                },
+                "files": [
+                    "src/Helpers/helper.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Darkking1098",
+                    "email": "ajaykumarraven147@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
+            "name": "rawan/ui",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "G:/Cluster/MantisUi/package/ui",
+                "reference": "1ef900d46c860fc410475c73bb2d423020c4ac0b"
+            },
+            "require-dev": {
+                "reliese/laravel": "^1.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mantis\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mantis\\Ui\\": "src/"
+                },
+                "files": [
+                    "src/Helpers/helper.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Darkking1098",
+                    "email": "ajaykumarraven147@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "symfony/clock",
@@ -8412,7 +8486,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

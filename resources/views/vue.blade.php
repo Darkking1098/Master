@@ -7,12 +7,11 @@
     <title>Laravel with vue</title>
     <link rel="stylesheet" href="{{ asset('mantis/css/base.css') }}">
     <link rel="stylesheet" href="{{ asset('mantis/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
     <link rel="stylesheet" href="{{ asset('mantis/icon/css/all.min.css') }}">
     @vite('resources/js/app.js')
 </head>
 
-<body>
-    <div id="root"></div>
-</body>
+<body id="root"></body>
 
 </html>

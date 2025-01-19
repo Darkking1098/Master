@@ -1,6 +1,6 @@
 @extends('user.assets.layout')
 @section('main')
     <main>
-        <h1>Hii Bro</h1>
+        <h1>About Us</h1>
     </main>
 @endsection

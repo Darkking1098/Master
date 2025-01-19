@@ -1,0 +1,31 @@
+.mu-paginate,
+.mu-paginate .rflex {
+    gap: 10px;
+}
+.mu-paginate .page-link {
+    box-shadow: 0 0 0 1.6px var(--gray_400);
+    border-radius: 6px;
+    cursor: pointer;
+    height: 36px;
+    min-width: 36px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    padding: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--gray_700);
+    transition: all 0.3s;
+    outline: 2px solid transparent;
+}
+.mu-paginate .page-link i {
+    font-size: 0.7em;
+}
+.mu-paginate .page-link:where(:focus, :hover) {
+    color: black;
+    outline: 2px solid var(--gray_900);
+}
+.mu-paginate .page-link:where(.active) {
+    color: white;
+    background: var(--prime);
+}
