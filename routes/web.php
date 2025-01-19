@@ -15,3 +15,9 @@ if (config('app.type') == "inertia_react") {
 }
 
 Route::prefix('')->group($file . ".php");
+
+Route::withoutMiddleware('web')->prefix('api')->group(function () {
+    Route::post('test', function () {
+        return ["name" => "Ajay"];
+    });
+});
